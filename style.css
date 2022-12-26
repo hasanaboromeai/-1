@@ -1,0 +1,48 @@
+/*  html لجسم صفحة style اضافة  */
+body{
+    
+background: cornflowerblue;
+font-family: 'poppins';sans-serif;
+}
+/*  class main الذي اسمه html  ل عنصر style اضافة */
+.min{
+width:600px;
+height:900px;
+padding:25px;
+font-family:arial;
+margin-top:50px;
+margin: 20vh auto 0 auto;
+padding: 20px;
+background-color: whitesmoke;
+border-radius: 8px;
+font-size: 12px;
+box-shadow: #0f2027;
+}
+ ل حقول ادخال معلومات الطلاب style اضافة  
+.inp1{
+    margin-right: 80px;
+}
+
+.R{
+    text-align: center;
+
+    color: red;
+}.tt{
+		height:300px;
+		
+}
+.div{
+	height:300px;
+}.table{
+	width:600px;
+}
+#tbody:{
+	height:300px;
+
+}
+#json{
+	width:250px;
+}
+form input{
+ padding: 5px;
+}

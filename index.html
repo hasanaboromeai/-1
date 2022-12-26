@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<title>ادخال معلومات الطلاب  </title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body >
+   <!--عنوان -->
+  <div class="min">
+    <h1 class="h1">إضافة طلب </h1> 
+     <div id="alert" class="R"></div>   
+	<!-- حقول ادخال معلومات الطلاب -->
+    
+    <label class="l1" for="userName" >أسم المستخم : </label>
+	<input class="inp1" type="text" id="userName" name="sname" placeholder="hasan_189417" required/><br/><br/>
+
+    <label class="l1" for="studentName" >أسم الطالب : </label>&nbsp;  
+	<input class="inp1" type="text" id="studentName" name="sname" placeholder="حسن ابورومية " required/><br/><br/>
+
+    <label class="l1" for="birthDay" > تاريخ الميلاد : </label>
+	<input class="inp1" type="date" id="birthDay" required/><br/><br/>
+<!-- حقل اخنيار برامج الطلاب -->
+    <label class="l1" for="program" >البرنامج : </label>&nbsp;&nbsp;&nbsp;&nbsp;    
+	<select class="inp1" id="program" required>
+        <option value="BAIT">BAIT</option>
+        <option value="TIC">TIC</option>
+        <option value="BIT">BIT</option>
+        <option value="BACT">BACT</option>
+    </select>  <br><br>
+<!-- -->
+    <label class="l1" for="phoneNumber" >رقم الموبايل : </label>
+	<input class="inp1" type="text" id="phoneNumber" name="sname" placeholder="963-936464649" required/><br/><br/>
+<!-- حقل التاكد من الكود الظاهر -->
+    <label class="l1" for="capcha" >يرجى ادخال رمز التحقق : </label>
+    <p ><div id="verifyCode" readonly style="border: none;"></div></p>
+	<input class="inp2" type="text" id="capcha" name="capcha" required/><br/><br/>
+    <input type="button" onclick="addStudent()"value="إضافة" >
+    
+    <hr>
+	<div class="div">
+		<!-- معلومات جدول اسماء الطلاب -->
+		<h2>جدول بأسماء الطلاب </h2><br>
+			<select id="pro" onchange="filter()">
+				<option value="ALL">all</option>	
+				<option value="BAIT">BAIT</option>
+				<option value="TIC">TIC</option>
+				<option value="BIT">BIT</option>
+				<option value="BACT">BACT</option>
+			</select>
+			<br>
+			<input type="radio" name="type" value="1" id="num" onclick="change(1)" checked>رقم المستخدم
+			<input type="radio" name="type" value="2" id="name" onclick="change(2)">اسم الطالب
+			<input type="radio" name="type" value="3" id="prog" onclick="change(3)">البرنامج
+			<table border="1px" class="table">
+			<div="tt">
+				<thead class="thead">
+					<tr>
+						<th>متسلسل</th>
+						<th>اسم المستخدم</th>
+						<th>اسم الطالب</th>
+						<th>البرنامج</th>
+					</tr>
+				</thead>
+				<tbody id="tbody">
+					
+					
+				</tbody>
+			</div>	
+			<br>
+		</table>
+    </div>
+	<hr>
+    <input type="button" onclick="convertToJson()" value="Convert To Json">
+    <textarea id="json" style="direction:ltr"></textarea>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+
+
+</html>
